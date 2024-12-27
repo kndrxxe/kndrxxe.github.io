@@ -14,10 +14,10 @@ body {
 .background {
   position: absolute;
   display: block;
-  top: 0;
+  top: 10%;
   left: 0;
   z-index: -1;
-  filter: opacity(35%);
+  filter: opacity(50%);
 }
 
 .nav-item {
@@ -30,13 +30,29 @@ body {
 
 .nav-link {
   color: white;
-  transition: all 0.1s ease-in-out;
   font-size: 16px;
   font-weight: bold;
+  position: relative;
 }
 .nav-link:hover, .nav-link:active, .nav-link:focus {
-  color: grey !important;
+  color: white !important;
   font-weight: bold;
+}
+.nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 /* Navbar */
@@ -97,15 +113,28 @@ body {
   background-color: black !important;
   color: white !important;
   border: 2px solid black !important;
-  box-shadow: gray 0 0 10px;
+  box-shadow: black 0 0 10px;
+}
+.btn-black {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  transition: all 0.2s ease;
+  font-size: 1.3em;
+  padding: 0.5em 4em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn-black:hover, .btn-black:active, .btn-black:focus {
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid black !important;
+  box-shadow: black 0 0 10px;
 }
 .bi {
   font-size: 1.3em;
   color: white;
   transition: all 0.1s ease-in-out;
-}
-.bi:hover, .bi:active, .bi:focus {
-  color: gray !important;
 }
 .text-light {
   color: white;
@@ -121,15 +150,4 @@ hr {
 .text-justify {
   text-align: justify;
 }
-.bi-facebook:hover, .bi-facebook:active, .bi-facebook:focus {
-  color: #0866ff !important;
-}
-.bi-instagram:hover, .bi-instagram:active, .bi-instagram:focus {
-  color: #dd2a7b !important;
-}
-.bi-twitter-x:hover, .bi-twitter-x:active, .bi-twitter-x:focus {
-  color: white !important;
-}
-.bi-linkedin:hover, .bi-linkedin:active, .bi-linkedin:focus {
-  color: #0077b5 !important;
-}
+.btn-
