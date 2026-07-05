@@ -9,6 +9,17 @@
 body {  
   font-family: "Montserrat", sans-serif;
   background-color: white;
+  color: #111111;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 body::-webkit-scrollbar {
@@ -35,7 +46,13 @@ body::-webkit-scrollbar-thumb {
   filter: opacity(50%);
 }
 html {
-  scroll-padding-top: 40px; /* Adjust this value to the height of your fixed header */
+  scroll-padding-top: 80px;
+}
+
+.hero-section {
+  min-height: 100vh;
+  margin-top: -36px;
+  padding-block: 3rem;
 }
 
 .nav-item {
@@ -150,6 +167,20 @@ html {
   color: white;
   transition: all 0.1s ease-in-out;
 }
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #d9d9d9;
+}
+
 .text-light {
   color: white;
 }
